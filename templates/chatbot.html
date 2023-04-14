@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+	<title>Chatbot Recommender</title>
+
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Auto Complete-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      var movie_list = {{suggestions|tojson}};
+    </script>
+
+      <!--Style -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+
+  </head>
+
+  <body id="content">
+  <header>
+			<div class="box">
+				<h1><img src="logo.png"></h1>
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/chatbot">Chatbot</a></li>
+					</ul>
+				</nav>
+			</div>
+  </header>
+
+
+  <form>
+  <label for="genre">What genre do you prefer?</label>
+  <input type="text" id="genre" name="genre"><br>
+
+  <label for="directors">Which directors do you like?</label>
+  <input type="text" id="directors" name="directors"><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
